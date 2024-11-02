@@ -1,0 +1,90 @@
+<html>
+  <head>
+<link rel="StyleSheet" type="text/css" href="shogi.css">
+<link rel="shortcut icon" href="/shogi/favicon.ico" type="image/jpeg" />
+    <title>Computer Shogi-Server (Floodgate)</title>
+  </head>
+  <body>
+  </body>
+  <h1>Computer Shogi-Server (Floodgate)</h1>
+<p>(<a href="index.html">Japanese</a>)</p>
+<h2>Status</h2>
+<ul>
+  <li>wathing current games <a href="view/latest-table.cgi?filter=floodgate&show_self_play=1">floodgate</a> (<a href="view/latest-table.cgi?show_self_play=1">other games</a>)
+  <li>Elo rating: <a href="logs/LATEST/players-floodgate.html">Rating</a>, <a href="/shogi/LATEST/players-floodgate14.html">Ratings for the latest two weeks</a>
+</ul>
+
+<h2>History</h2>
+
+<h3 id="gamerecords">Game records</h3>
+<ul>
+  <li><a href="x/kifuarchive-daily/">daily archive of 2018</a> (hourly updated)
+  <li><a href="x/wdoor2018.7z">archive of all 2018 records</a> (daily updated)
+  <li><a href="x/wdoor2017.7z">archive of all 2017 records</a>, <a href="https://sourceforge.jp/projects/shogi-server/releases/">2017 and before</a> (hosted by sourcefore.jp)
+  <li><a href="x/html/current/">summary of players</a>
+</ul>
+
+<h3>Rating</h3>
+<ul>
+  <li>past snapshots:
+    <ul>
+          <li><a href="x/rating/players-floodgate-20170514.html">2017-05-14</a>,
+          <a href="x/rating/players-floodgate-20160514.html">2016-05-14</a>,
+          <a href="x/rating/players-floodgate-20150514.html">2015-05-14</a>,
+          <a href="x/rating/players-floodgate-20140514.html">2014-05-14</a>,
+          <a href="x/rating/players-floodgate-20130514.html">2013-05-14</a>,
+          <li><a href="x/rating/players-floodgate-20120514.html">2012-05-14</a>,
+          <a href="x/rating/players-floodgate-20110514.html">2011-05-14</a>,
+          <a href="x/rating/players-floodgate-20100514.html">2010-05-14</a>,
+          <a href="x/rating/players-floodgate-20090528.html">2009-05-28</a>,
+          <a href="x/rating/players-floodgate-20080516.html">2008-05-16</a>
+    </ul>
+  <li><a href="http://wdoor.c.u-tokyo.ac.jp/shogi/x/rating/">history of ratings</a>
+</ul>
+
+<h2>How to participate</h2>
+<h3>CSA client</h3>
+<ul>
+  <li>If your client speaks <a href="http://www2.computer-shogi.org/protocol/tcp_ip_server_12_e.html">the standard CSA protocol</a> over TCP/IP,
+    <ul>
+      <li>connect to wdoor.c.u-tokyo.ac.jp:4081
+      <li>login with special password "<code>floodgate-300-10F,trip</code>", where "trip" should be replaced by your own secret string
+      <li>wait for game start (the server tries to pair players every half an hour)
+    </ul>
+  <li>If your client speaks <a href="http://shogi-server.osdn.jp/protocol.html">the extended CSA protocol</a> over TCP/IP, just specify "<code>floodgate-300-10F</code>" for gamename.
+  <li>If your client can only communicate with human, you can use a bridge:
+    <ul>
+      <li><a href="http://www.junichi-takada.jp/sficp/">Shogi Framework Implements CSA Protocol</a> (the author: J. Takada)
+    </ul>
+</ul>
+
+<h3>USI client</h3>
+
+<ul>
+  <li>If your client speaks <a href="https://web.archive.org/web/20150525174702/http://www.glaurungchess.com/shogi/usi.html">usi protocol</a>, you can use a bridge program to connect the Floodgate.
+    <ul>
+      <li>The Shogi-server comes with a sample script <a href="https://osdn.net/projects/shogi-server/scm/git/shogi-server/tree/master/bin/">'usiToCsa.rb'</a> written in Ruby, which has yet to support the Fischer time management. (<a href="https://osdn.net/projects/shogi-server/wiki/UsiToCsa">document</a>)
+      <li><a href="https://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/trunk/gpsshogi/sample/perl-cluster/bin/csa2usi.pl?view=markup&root=gpsshogi">csa2usi.pl</a> (the author: the developer of GPS Shogi)
+      <li><a href="http://www.geocities.jp/shogidokoro/index.html">ShogiDokoro</a> (the author: anonymous)
+    </ul>
+</ul>
+
+<h3>How to test with your two programs</h3>
+
+(tbd)
+
+<h2>Resources</h2>
+<ul>
+  <li>protocols:
+    <ul>
+      <li>official <a href="http://www2.computer-shogi.org/protocol/tcp_ip_server_12_e.html">CSA protocol</a>
+      <li>our <a href="http://shogi-server.osdn.jp/protocol.html">extended protocol</a>, described in Japanese
+    </ul>
+  <li>shogi-server: <a href="https://osdn.net/projects/shogi-server/">source codes</a> written in Ruby, <a href="http://shogi-server.sourceforge.jp/">description</a> in Japanese. 
+</ul>
+
+<h2>disclaimer</h2>
+This server is operated in voluntary "as is".  Neither any individual nor the University of Tokyo will be responsible for any event.
+
+
+</html>
